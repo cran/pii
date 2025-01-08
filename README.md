@@ -4,6 +4,9 @@
 # pii: A package for dealing with personally identifiable information
 
 <!-- badges: start -->
+
+[![CRAN
+status](https://www.r-pkg.org/badges/version/pii)](https://CRAN.R-project.org/package=pii)
 <!-- badges: end -->
 
 The goal of pii is to flag columns that potentially contain personally
@@ -43,6 +46,11 @@ You can install the development version of pii from
 ``` r
 # install.packages("devtools")
 devtools::install_github("jacobpstein/pii")
+```
+
+You can also download from CRAN with:
+```{r}
+install.packages("pii")
 ```
 
 ## Example
@@ -152,12 +160,12 @@ head(car_df_to_share)
 #> 5 Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
 #> 6           Valiant 18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
 #>                               join_key
-#> 1 9cae626f-54b9-4c10-a7db-74a974381e61
-#> 2 6b6897d3-5c37-4996-9e6d-32d099bf8437
-#> 3 f953236b-ca69-41fb-b27c-37609f01183b
-#> 4 17a32c55-ecc8-4c20-acd4-ef2cc143328f
-#> 5 f87060c0-4f59-49df-a48d-3c55a694d88b
-#> 6 8eda4b67-6d43-462a-88b6-b0185c144cfa
+#> 1 205a0cf0-fc6e-4cfa-8527-d0c8f1642b60
+#> 2 74423f7c-6d4d-4a98-8077-ad9b45f25c36
+#> 3 b7bafae1-7f43-48c2-95ac-61db0e70b5e1
+#> 4 d4d41bbe-25fa-4335-804b-320ee48f4e96
+#> 5 3ceb8cd6-052e-42be-a48f-08c6a045f4ff
+#> 6 4b6514bf-6fd8-42dd-b793-3a3e4846dcbe
 ```
 
 Seems ok. Meanwhile, you can put the PII in a secure, encrypted
@@ -168,10 +176,10 @@ location. But let’s take a peak…
 # take a look at our PII data
 head(car_PII)
 #>   phone_number  longitude  latitude                             join_key
-#> 1 555-292-5528 -165.64468 -71.17268 9cae626f-54b9-4c10-a7db-74a974381e61
-#> 2 555-699-1808  -63.92327  23.78131 6b6897d3-5c37-4996-9e6d-32d099bf8437
-#> 3 555-732-3162 -103.97027  35.18776 f953236b-ca69-41fb-b27c-37609f01183b
-#> 4 555-513-8575 -119.58928 -77.85741 17a32c55-ecc8-4c20-acd4-ef2cc143328f
-#> 5 555-597-6296  177.27554 -75.31981 f87060c0-4f59-49df-a48d-3c55a694d88b
-#> 6 555-973-6320 -178.92443  36.31883 8eda4b67-6d43-462a-88b6-b0185c144cfa
+#> 1 555-292-5528 -165.64468 -71.17268 205a0cf0-fc6e-4cfa-8527-d0c8f1642b60
+#> 2 555-699-1808  -63.92327  23.78131 74423f7c-6d4d-4a98-8077-ad9b45f25c36
+#> 3 555-732-3162 -103.97027  35.18776 b7bafae1-7f43-48c2-95ac-61db0e70b5e1
+#> 4 555-513-8575 -119.58928 -77.85741 d4d41bbe-25fa-4335-804b-320ee48f4e96
+#> 5 555-597-6296  177.27554 -75.31981 3ceb8cd6-052e-42be-a48f-08c6a045f4ff
+#> 6 555-973-6320 -178.92443  36.31883 4b6514bf-6fd8-42dd-b793-3a3e4846dcbe
 ```
